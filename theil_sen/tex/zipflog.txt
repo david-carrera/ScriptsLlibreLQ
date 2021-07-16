@@ -1,0 +1,1 @@
+\log f = \alpha \log(r) + \log(A)
