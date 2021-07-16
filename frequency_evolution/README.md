@@ -30,7 +30,7 @@ un any concret, s'interpreta com a proporció zero.
 
 En aquest directori s'inclouen les dades corresponents en format csv a les
 figures del llibre, que s'han obtingut transformant les dades a partir dels
-format oferts per [Google_Ngrams](https://books.google.com/ngrams/)
+format oferts per [Google Ngrams](https://books.google.com/ngrams/)
 ([`zipf_ngrams.csv`](zipf_ngrams.csv)) i pel [CTILC](https://ctilc.iec.cat)
 ([`catalan_words.csv`](catalan_words.csv)). Cap dels dos serveis ofereix un
 sistema oficial per obtenir les dades en un format informàtic. Més informació
