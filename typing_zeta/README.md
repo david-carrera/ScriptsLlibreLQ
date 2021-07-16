@@ -1,6 +1,7 @@
 # Comparació entre la mecanografia aleatòria i la distribució Zeta truncada
 
-Aquest script correspon a la figura 11 i genera la següent gràfica:
+Aquest script de `R` correspon a la figura 11 del llibre. Genera la següent
+gràfica:
 
 ![Comparació entre la mecanografia aleatòria i la distribució Zeta truncada](typing_zeta.png)
 
@@ -10,4 +11,13 @@ Aquesta gràfica s'ha generat executant el script:
 Rscript typing_zeta.R
 ```
 
-El script necessita les llibreries `ggplot2` i `purrr` per tal de funcionar.
+El script depèn de les llibreries `ggplot2` i `purrr`. Es poden instal·la des de
+qualsevol línia de comandes de `R`:
+
+``` r
+install.packages('ggplot2')
+```
+
+``` r
+install.packages('purrr')
+```

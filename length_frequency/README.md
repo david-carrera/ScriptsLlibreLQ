@@ -1,12 +1,12 @@
 # Relació entre llargada i freqüència dels mots
 
-Aquest script genera la figura 9 del llibre, mostrant la relació entre
-freqüència i llargada dels mots d'un text en escala doble logarítmica. A més,
-també pot mostrar el lloc d'alguns dels mots dins la gràfica.
+Aquest script de `R` mostra la relació entre freqüència i llargada dels mots
+d'un text en escala doble logarítmica. A més, també pot mostrar alguns dels
+mots dins la gràfica. Correspon a la figura 9 del llibre.
 
-És un script de `R`, executable amb `Rscript`, que depèn del paquet `ggplot2`,
-`dplyr` i, opcionalment, del paquet `ggrepel`. Els paquets es poden instal·lar
-des de una línia de comandes de `R`:
+El script depèn dels paquets `ggplot2`, `dplyr` i, opcionalment si es volen
+mostrar les paraules, del paquet `ggrepel` que es poden instal·lar des de una
+línia de comandes de `R`:
 
 ``` r
 install.packages('ggplot2')
@@ -20,12 +20,13 @@ install.packages('dplyr')
 install.packages('ggrepel')
 ```
 
-Per tal d'executar el script, és necessari tenir un fitxer csv amb les paraules
-d'un text i les seves freqüències. Un fitxer d'exemple per a la declaració dels
-drets humans, així com un script per generar fitxers semblants per a qualsevol
-text, es pot trobar dins el subdirectori d'[anàlisis de text](../text_analysis).
+El script pren com a paràmetre una fitxer csv amb la freqüència de cadascuna de
+les paraules d'un text. Aquest repositori inclou un [script](../text_analysis)
+de `python` per a generar aquest fitxer a partir d'un text. El mateix directori
+inclou el fitxer csv corresponent a la declaració dels drets humans en català.
 
-Com a exemple, una gràfica semblant a la que apareix en el llibre:
+Utilitzant aquest fitxer d'exemple, es pot generar una gràfica semblant a la
+del llibre:
 
 ![Relació entre llargada i freqüència dels mots](length_frequency.png)
 

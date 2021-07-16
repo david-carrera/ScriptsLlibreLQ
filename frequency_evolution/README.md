@@ -1,11 +1,10 @@
 # Evolució de la freqüència de n-grames en el temps
 
-Aquest script genera les figures 14 i 15 del llibre, mostrant la evolució en el
-temps d'un conjunt de n-grames.
+Aquest script de `R` mostra la evolució en el temps d'un conjunt de
+n-grames. Correspon a les figures 14 i 15 del llibre.
 
-És un script de `R`, executable amb `Rscript`, que depèn del paquet `ggplot2`,
-`dplyr`, `tidyr` i `ggrepel`. Els paquets es poden instal·lar des de una línia
-de comandes de `R`:
+El script depèn dels paquets `ggplot2`, `dplyr`, `tidyr` i `ggrepel` que es pot
+instal·lar des de una línia de comandes de `R`:
 
 ``` r
 install.packages('ggplot2')
@@ -23,27 +22,24 @@ install.packages(`tidyr`)
 install.packages('ggrepel')
 ```
 
-Per tal d'executar el script, és necessari tenir un fitxer csv amb les dades
-sobre la evolució dels n-grames amb el temps. El fitxer ha de contenir tres
-columnes per al any, n-grama i proporció (`year`, `proportion` i `ngram`). Cada
-fila representa la proporció (freqüència / total) del n-grama en aquell any. Si
-no hi ha dades per un any concret, s'interpreta com a proporció zero.
+El script pren com a paràmetre un fitxer csv amb les dades sobre la evolució
+dels n-grames amb el temps. El fitxer ha de contenir tres columnes per al any,
+n-grama i proporció (`year`, `ngram` i `proportion`). Cada fila representa la
+proporció (freqüència / total) del n-grama en aquell any. Si no hi ha dades per
+un any concret, s'interpreta com a proporció zero.
 
-La obtenció d'aquestes dades ja és un tema més complicat. En aquest directori
-s'inclouen les dades corresponents en format csv a les figures del llibre, que
-s'han obtingut transformant les dades a partir dels format oferts per
-[Google_Ngrams](https://books.google.com/ngrams/)
+En aquest directori s'inclouen les dades corresponents en format csv a les
+figures del llibre, que s'han obtingut transformant les dades a partir dels
+format oferts per [Google_Ngrams](https://books.google.com/ngrams/)
 ([`zipf_ngrams.csv`](zipf_ngrams.csv)) i pel [CTILC](https://ctilc.iec.cat)
 ([`catalan_words.csv`](catalan_words.csv)). Cap dels dos serveis ofereix un
-sistema oficial per obtenir les dades en un format informàtic. El mètode
-d'obtenció d'aquestes dades consisteix en una bona dosi de copiar i enganxar de
-les pàgines corresponents i d'aplicar els dos scripts
-([`clean_google.py`](clean_google.py) i [`clean_ctilc.py`](clean_ctilc.py))
-presents en aquest directori per obtenir els csv en el format desitjat.
+sistema oficial per obtenir les dades en un format informàtic. Més informació
+sobre com obtenir dades d'aquests dos serveis en concret es pot trobar en els
+scripts ([`clean_google.py`](clean_google.py) i
+[`clean_ctilc.py`](clean_ctilc.py)).
 
-A continuació, les dues figures que es poden obtenir a partir de les dades ja
-processades presents en aquest directori, similars a les figures 14 i 15 del
-llibre.
+Utilitzant aquests fitxers csv ja generats, es poden generar unes gràfiques
+semblants a les del llibre:
 
 ![Evolució de la freqüència de paraules catalanes](ctilc_frequency_evolution.png)
 
@@ -58,3 +54,6 @@ Rscript frequency_evolution.R catalan_words.csv ctilc_frequency_evolution.png
 ```
 Rscript frequency_evolution.R zipf_ngrams.csv google_frequency_evolution.png
 ```
+
+La imatge generada no té perquè ser `png`, per exemple `jpg` o `pdf` es poden
+generar canviant la extensió del nom del fitxer de sortida.

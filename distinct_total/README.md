@@ -1,23 +1,24 @@
 # Nombre de paraules distintes en funció del nombre de paraules totals
 
-Aquest script mostra la relació entre el número de paraules diferents i el
-número de paraules totals d'un text en escala log-log. Correspon a la figura 12
-del llibre.
+Aquest script de `R` mostra la relació entre el número de paraules diferents i
+el número de paraules totals d'un text en escala log-log. Correspon a la figura
+12 del llibre.
 
-La gràfica la genera aquest script de `R`, executable amb `Rscript`. Depèn del
-paquet `ggplot2`, que es pot instal·lar des de una línia de comandes de `R`:
+El script depèn del paquet `ggplot2`, que es pot instal·lar des de una línia de
+comandes de `R`:
 
 ``` r
 install.packages('ggplot2')
 ```
 
-L'anàlisi del text, però, l'executa un script de `python`. El resultat del
-script de `python` és un csv què aquest script pren com a paràmetre. Tant un
-fitxer csv d'exemple creat a partir del text de la declaració dels drets humans
-com el script de `python` que el genera es poden trobar dins el subdirectori
-d'[anàlisis de text](../text_analysis).
+El script pren com a paràmetre una fitxer csv amb les dades de paraules
+distintes i paraules totals d'un text. Aquest repositori inclou un
+[script](../text_analysis) de `python` per a generar aquest fitxer a partir
+d'un text. El mateix directori inclou el fitxer csv corresponent a la
+declaració dels drets humans en català.
 
-Utilitzant aquest fitxer d'exemple, es pot generar una gràfica semblant a la del llibre:
+Utilitzant aquest fitxer d'exemple, es pot generar una gràfica semblant a la
+del llibre:
 
 ![Nombre de paraules distintes en funció del nombre de paraules totals](distinct_total.png)
 
