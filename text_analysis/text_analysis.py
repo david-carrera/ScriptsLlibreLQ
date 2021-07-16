@@ -17,52 +17,36 @@ import sys
 import csv
 import argparse
 import collections
+import string
 
-try:
-    import nltk
-except ImportError:
-    import string
-    print("nltk no disponible, s'utilitza un altre mètode per a tokenitzar el "
-          "text")
-    have_nltk = False
-else:
-    have_nltk = True
+def get_tokens(f):
+    """Tokenitza el text del fitxer donat i retorna la llista de paraules. Paraules
+    amb apostrof queden separades per l'apostrof, per exemple: "l'estil" ->
+    ["l", "estil"]. Paraules amb un guió es consideren una sola paraula,
+    per exemple: "dos-cents" -> ["dos-cents"]
 
-
-if have_nltk:
-    def get_tokens(f):
-        """Tokenitza el text del fitxer donat utilitzant nltk i retorna la llista de
-        paraules. Paraules amb apostrof queden separades per l'apostrof, per
-        exemple: "l'estil" -> ["l", "estil"]
-
-        """
-        text = f.read().lower()
-        tokenizer = nltk.tokenize.RegexpTokenizer(r"[a-z]'|[\w\-]+")
-        tokens = [t.replace("'", "")
-                  for t in tokenizer.tokenize(text)
-                  if not t.isdigit() and not all(x == '-' for x in t)]
-        return [t for t in tokens if t]
-else:
-    def get_tokens(f):
-        """Tokenitza el text del fitxer donat i retorna la llista de paraules. Paraules
-        amb apostrof queden separades per l'apostrof, per exemple: "l'estil" ->
-        ["l", "estil"]. Paraules amb un guió es consideren una sola paraula,
-        per exemple: "dos-cents" -> ["dos-cents"]
-
-        """
-        tokens = []
-        text = f.read().lower()
-        for word in text.split():
-            word = ''.join(
-                c
-                for c in word
-                if c not in string.punctuation.replace("'", "")
-            )
+    """
+    punctuation_to_remove = string.punctuation.replace("'", "").replace('-','')
+    
+    tokens = []
+    text = f.read().lower()
+    for word in text.split():
+        # intenta salvar l gemminada
+        for c in punctuation_to_remove:
+            word = word.replace('l'+c+'l', 'l·l')
+            
+        word = ''.join(
+            c
+            for c in word
+            if c not in punctuation_to_remove
+        )
+        
+        if word:
             if "'" in word:
-                tokens.extend(word.split("'"))
-            elif word and not word.isdigit():
+                tokens.extend(x for x in word.split("'") if x)
+            elif not word.isdigit():
                 tokens.append(word)
-        return tokens
+    return tokens
 
 
 def analysis_frequencies(tokens, csvwriter):
