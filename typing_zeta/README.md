@@ -11,7 +11,7 @@ Aquesta gràfica s'ha generat executant el script:
 Rscript typing_zeta.R
 ```
 
-El script depèn de les llibreries `ggplot2` i `purrr`. Es poden instal·la des de
+El script depèn de les llibreries `ggplot2` i `purrr`. Es poden instal·lar des de
 qualsevol línia de comandes de `R`:
 
 ``` r

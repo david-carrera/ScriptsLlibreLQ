@@ -28,7 +28,7 @@ Aquestes instruccions són vàlides a data: 2020/07/12
 
 def main():
     if len(sys.argv) != 3:
-        print("ús: neteja_ngrams.py ngrams.json resultat.csv")
+        print("ús: python neteja_ngrams.py ngrams.json resultat.csv")
         return 1
 
     with open(sys.argv[1]) as f:

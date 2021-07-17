@@ -63,7 +63,7 @@ def analysis_frequencies(tokens, csvwriter):
 
 def analysis_distinct_words(tokens, csvwriter):
     """Genera l'analisis del numero de paraules distintes per al nombre de paraules
-totals del text.
+    totals del text.
 
     """
     counter = collections.Counter()

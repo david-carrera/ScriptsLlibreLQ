@@ -25,7 +25,7 @@ del llibre:
 Aquesta gràfica s'ha generat a partir de la següent comanda:
 
 ```
-Rscript distinct_total.R ../text_analysis/DeclaracioDretsHumansDistintes.csv distinct_total.png 
+Rscript distinct_total.R ../text_analysis/DeclaracioDretsHumansDistintes.csv distinct_total.png
 ```
 
 La imatge generada no té perquè ser `png`, per exemple `jpg` o `pdf` es poden

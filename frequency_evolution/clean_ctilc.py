@@ -27,6 +27,10 @@ Per crear el directori i els fitxers de text:
 
 
 def parse(text):
+    """Llegeix el text d'un dels fitxers, convertint-lo en un diccionari {any:
+    recompte}
+
+    """
     result = {}
 
     for line in text.split('\n'):
@@ -46,6 +50,10 @@ def parse(text):
 
 
 def collect_words(root):
+    """Llegeix tots els fitxers del directori root, retornant un diccionari
+    {paraula: dades} on dades és un altre diccionari, {any: recompte}
+
+    """
     words = {}
 
     for filename in next(os.walk(root))[2]:
@@ -64,6 +72,11 @@ def collect_words(root):
 
 
 def tocsv(words, filename):
+    """Crea el fitxer csv filename a partir del diccionari words retornat per
+    collect_words. Hi hauria d'haver una paraula especial, 'totals', que indica
+    els totals de cada any per tal de calcular la proporció.
+
+    """
     with open(filename, 'w') as f:
         writer = csv.writer(f)
         writer.writerow(['year', 'proportion', 'ngram'])
@@ -77,7 +90,7 @@ def tocsv(words, filename):
 
 def main():
     if len(sys.argv) != 3:
-        print("ús: neteja_ctilc.py directori/amb/txts resultat.csv")
+        print("ús: python neteja_ctilc.py directori/amb/txts resultat.csv")
         return 1
 
     words = collect_words(sys.argv[1])

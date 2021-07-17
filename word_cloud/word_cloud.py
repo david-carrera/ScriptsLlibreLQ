@@ -114,7 +114,7 @@ STOPWORDS_CAT = set([
 
 def subscript(n):
     """Crea el caràcter de subscript corresponent a la columna n de l'estandard
-Unicode
+    Unicode
 
     """
     return bytes([0xe2, 0x82, 0x80+n]).decode('utf-8')
@@ -157,12 +157,24 @@ if __name__ == '__main__':
     # afegeix també els parametres de WordCloud que es fan servir...
     parser.add_argument("--width", type=int, default=500)
     parser.add_argument("--height", type=int, default=500)
+
+    noto_font = '/usr/share/fonts/noto/NotoSans-Regular.ttf'
+    if os.path.exists(noto_font):
+        default_font_path = noto_font
+    else:
+        default_font_path = None
+    
     parser.add_argument(
         "--font-path",
-        default='/usr/share/fonts/noto/NotoSans-Regular.ttf',
+        default=default_font_path,
         required=os.name == 'nt',
-        help="aquest parametre és obligatori per a usuaris de Windows"
+        help="Aquest parametre és obligatori per a usuaris de Windows. "
+        "Per a Linux, el valor per defecte és una font Noto si està instal·lada "
+        "i, si no, la font per defecte del paquet wordcloud. És possible que les "
+        "freqüències de les paraules no apareixin correctament amb la font per "
+        "defecte del paquet."
     )
+    
     parser.add_argument("--margin", type=int, default=10)
     parser.add_argument("--prefer-horizontal", type=float, default=1.0)
     parser.add_argument("--scale", type=float, default=10)

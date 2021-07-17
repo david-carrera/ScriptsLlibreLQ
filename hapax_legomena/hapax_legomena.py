@@ -6,7 +6,7 @@ import csv
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("ús: hapax_legomena.py fitxer.csv")
+        print("ús: python hapax_legomena.py fitxer.csv")
 
     repeats = {}
     total = 0
@@ -28,4 +28,5 @@ if __name__ == '__main__':
         )
     else:
         print("No hi ha paraules repetides.")
-        print("{0} paraules en total".format(total))
+
+    print("{0} paraules en total.".format(total))
