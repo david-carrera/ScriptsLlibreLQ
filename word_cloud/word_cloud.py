@@ -111,6 +111,14 @@ STOPWORDS_CAT = set([
     'úniques'
 ])
 
+# Contraccions del català segons la secció 4.2.1 de la ortografia catalana
+# Versió digital:
+#   https://www.iec.cat/llengua/documents/ortografia_catalana_versio_digital.pdf
+# Visitada el 2021-07-17
+STOPWORDS_CAT.update(set([
+    'al', 'als', 'del', 'dels', 'pel', 'pels', 'cal', 'cals', 'can', 'as',
+    'des', 'pes', 'cas', 'son', 'sul', 'suls'
+])
 
 def subscript(n):
     """Crea el caràcter de subscript corresponent a la columna n de l'estandard
