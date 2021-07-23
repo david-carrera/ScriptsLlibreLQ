@@ -17,6 +17,8 @@ import wordcloud
 #
 # http://latel.upf.edu/morgana/altres/pub/ca_stop.htm
 # (2021-07-05)
+#
+# Per simplicitat, les paraules ambigües (per exemple, cap) s'han inclòs.
 STOPWORDS_CAT = set([
     'a', 'abans', "abans-d'ahir", 'abintestat', 'ací', 'adesiara', 'adés',
     'adéu', 'adàgio', 'ah', 'ahir', 'ai', 'aitambé', 'aitampoc', 'aitan',
@@ -115,6 +117,8 @@ STOPWORDS_CAT = set([
 # Versió digital:
 #   https://www.iec.cat/llengua/documents/ortografia_catalana_versio_digital.pdf
 # Visitada el 2021-07-17
+#
+# Per simplicitat, les contraccions ambigües (per exemple, cal) s'han inclòs.
 STOPWORDS_CAT.update(set([
     'al', 'als', 'del', 'dels', 'pel', 'pels', 'cal', 'cals', 'can', 'as',
     'des', 'pes', 'cas', 'son', 'sul', 'suls'
