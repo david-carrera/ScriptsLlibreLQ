@@ -10,20 +10,20 @@ Hi ha dos tipus d'anàlisi implementats, necessaris per a la generació de varie
 
 El resultat d'aquest anàlisis es guarda en un fitxer csv.
 
-En aquest directori es poden trobar els fitxers
-[DeclaracioDretsHumansFrequencies.csv](DeclaracioDretsHumansFrequencies.csv) i
-[DeclaracioDretsHumansDistintes.csv](DeclaracioDretsHumansDistintes.csv), el
-resultat d'executar els dos anàlisis per al text de la declaració dels [drets
-humans](../text_extraction/DeclaracioDretsHumans.txt).
+En el directori de [dades](../dades) es poden trobar els fitxers
+[DeclaracioDretsHumansFrequencies.csv](../dades/DeclaracioDretsHumansFrequencies.csv) i
+[DeclaracioDretsHumansDistintes.csv](../dades/DeclaracioDretsHumansDistintes.csv),
+el resultat d'executar els dos anàlisis per al text de la declaració dels
+[drets humans](../dades/DeclaracioDretsHumans.txt).
 
 Els mateixos fitxers csv es poden obtenir executant
 
 ```
-python3 text_analysis.py ../text_extraction/DeclaracioDretsHumans.txt freq -o DeclaracioDretsHumansFrequencies.csv
+python3 text_analysis.py ../dades/DeclaracioDretsHumans.txt freq -o ../dades/DeclaracioDretsHumansFrequencies.csv
 ```
 
 i
 
 ```
-python3 text_analysis.py ../text_extraction/DeclaracioDretsHumans.txt dist -o DeclaracioDretsHumansDistintes.csv
+python3 text_analysis.py ../dades/DeclaracioDretsHumans.txt dist -o ../dades/DeclaracioDretsHumansDistintes.csv
 ```

@@ -22,8 +22,10 @@ install.packages('ggrepel')
 
 El script pren com a paràmetre una fitxer csv amb la freqüència de cadascuna de
 les paraules d'un text. Aquest repositori inclou un [script](../text_analysis)
-de `python` per a generar aquest fitxer a partir d'un text. El mateix directori
-inclou el fitxer csv corresponent a la declaració dels drets humans en català.
+de `python` per a generar aquest fitxer a partir d'un text. El directori de
+[dades](../dades) inclou el [fitxer
+csv](../dades/DeclaracioDretsHumansFrequencies.csv) corresponent a la declaració
+dels drets humans en català.
 
 Utilitzant aquest fitxer d'exemple, es pot generar una gràfica semblant a la
 del llibre:
@@ -33,7 +35,7 @@ del llibre:
 Aquesta gràfica s'ha generat a partir de la següent comanda:
 
 ```
-Rscript length_frequency.R ../text_analysis/DeclaracioDretsHumansFrequencies.csv length_frequency.png --paraules
+Rscript length_frequency.R ../dades/DeclaracioDretsHumansFrequencies.csv length_frequency.png --paraules
 ```
 
 La opció `--paraules` resulta en un error si el paquet `ggrepel` no està

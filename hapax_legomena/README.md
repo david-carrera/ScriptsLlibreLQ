@@ -8,9 +8,10 @@ El script pren com a paràmetre una fitxer csv amb la freqüència de cadascuna 
 les paraules d'un text. Aquest repositori inclou un [script](../text_analysis)
 de `python` per a generar aquest fitxer a partir d'un text.
 
-Com a exemple, en aquest directori s'inclouen tant el text del repte HL del
-llibre ([`repte_hl.txt`](repte_hl.txt)), així com el csv que resulta de
-processar-lo amb el script d'anàlisi de text ([`repte_hl.csv`](repte_hl.csv)).
+Com a exemple, en el directori de [dades](../dades) s'inclouen tant el text del
+repte HL del llibre ([`repte_hl.txt`](../dades/repte_hl.txt)), així com el csv
+que resulta de processar-lo amb el script d'anàlisi de text
+([`repte_hl.csv`](../dades/repte_hl.csv)).
 
 Es pot comprovar que, en efecte, el text del llibre és un Hapax Legomena amb la
 comanda:

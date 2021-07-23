@@ -14,8 +14,10 @@ pip3 install wordcloud==1.8.1
 
 El script pren com a paràmetre una fitxer csv amb la freqüència de cadascuna de
 les paraules d'un text. Aquest repositori inclou un [script](../text_analysis)
-de `python` per a generar aquest fitxer a partir d'un text. El mateix directori
-inclou el fitxer csv corresponent a la declaració dels drets humans en català.
+de `python` per a generar aquest fitxer a partir d'un text. El directori de
+[dades](../dades) inclou el [fitxer
+csv](../dades/DeclaracioDretsHumansFrequencies.csv) corresponent a la
+declaració dels drets humans en català.
 
 Utilitzant aquest fitxer d'exemple, es pot generar un núvol de paraules
 semblant al del llibre:
@@ -25,7 +27,7 @@ semblant al del llibre:
 Aquest núvol de paraules s'ha generat a partir de la següent comanda:
 
 ```
-python3 word_cloud.py --mostra-frequencies ../text_analysis/DeclaracioDretsHumansFrequencies.csv word_cloud.png
+python3 word_cloud.py --mostra-frequencies ../dades/DeclaracioDretsHumansFrequencies.csv word_cloud.png
 ```
 
 Es poden controlar molts aspectes de la generació del núvol de paraules sense

@@ -28,14 +28,16 @@ n-grama i proporció (`year`, `ngram` i `proportion`). Cada fila representa la
 proporció (freqüència / total) del n-grama en aquell any. Si no hi ha dades per
 un any concret, s'interpreta com a proporció zero.
 
-En aquest directori s'inclouen les dades corresponents en format csv a les
-figures del llibre, que s'han obtingut transformant les dades a partir dels
-format oferts per [Google Ngrams](https://books.google.com/ngrams/)
-([`zipf_ngrams.csv`](zipf_ngrams.csv)) i pel [CTILC](https://ctilc.iec.cat)
-([`catalan_words.csv`](catalan_words.csv)). Cap dels dos serveis ofereix un
-sistema oficial per obtenir les dades en un format informàtic. Més informació
-sobre com obtenir dades d'aquests dos serveis en concret es pot trobar en el
-codi de ([`clean_google.py`](clean_google.py) i
+En el directori de [dades](../dades) s'inclouen les dades corresponents en
+format csv a les figures del llibre, que s'han obtingut transformant les dades
+a partir dels format oferts per [Google
+Ngrams](https://books.google.com/ngrams/)
+([`zipf_ngrams.csv`](../dades/zipf_ngrams.csv)) i pel
+[CTILC](https://ctilc.iec.cat)
+([`catalan_words.csv`](../dades/catalan_words.csv)). Cap dels dos serveis
+ofereix un sistema oficial per obtenir les dades en un format informàtic. Més
+informació sobre com obtenir dades d'aquests dos serveis en concret es pot
+trobar en el codi de ([`clean_google.py`](clean_google.py) i
 [`clean_ctilc.py`](clean_ctilc.py)).
 
 Utilitzant aquests fitxers csv ja generats, es poden generar unes gràfiques
@@ -48,11 +50,11 @@ semblants a les del llibre:
 Aquestes gràfiques s'han generat a partir de les següents comandes:
 
 ```
-Rscript frequency_evolution.R catalan_words.csv ctilc_frequency_evolution.png
+Rscript frequency_evolution.R ../dades/catalan_words.csv ctilc_frequency_evolution.png
 ```
 
 ```
-Rscript frequency_evolution.R zipf_ngrams.csv google_frequency_evolution.png
+Rscript frequency_evolution.R ../dades/zipf_ngrams.csv google_frequency_evolution.png
 ```
 
 La imatge generada no té perquè ser `png`, per exemple `jpg` o `pdf` es poden

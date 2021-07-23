@@ -96,3 +96,8 @@ Els següent codi genera fitxers utilitzats per altres scripts.
 * [**Extracció de text**](text_extraction) Aquest subdirectori no conté cap
   script, però introdueix un mètode per extreure text de una gran varietat de
   tipus de fitxers (incloent pdfs). Utilitza `python`.
+
+### Dades
+
+Les dades utlitzades en els scripts es troben en el seu propi directori,
+[dades](dades)
