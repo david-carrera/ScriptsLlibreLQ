@@ -1,15 +1,15 @@
 # Scripts de Lingüística Quantitativa
 
 Aquest repositori conté els scripts utilitzats per generar part del material
-del llibre **Lingüística Quantitativa: L'estadística de les paraules**. Els
-scripts estan organitzats en subdirectoris. Cada subdirectori conté una breu
-descripció del script: paquets addicional del que pugui dependre, indicacions
-sobre com executar-lo, etc.
+del llibre **Lingüística Quantitativa: L'estadística de les paraules**. El codi
+està organitzat en subdirectoris. Cada subdirectori conté una breu descripció
+d'un script: paquets addicional del que pugui dependre, indicacions sobre com
+executar-lo, etc.
 
-No cal ser un expert en programació per tal de jugar i experimentar amb aquests
-scripts. Han estat pensats de forma que qualsevol persona amb un nivell bàsic
-de coneixement en pugi treure suc. Tots els scripts estan escrits en `python` o
-en `R`. Els scripts de `R` generen gràfiques mentre que `python` té un ús més
+No cal ser un expert en programació per tal de jugar i experimentar amb aquest
+codi. Han estat pensats de forma que qualsevol persona amb un nivell bàsic de
+coneixement en pugi treure suc. Tots els scripts estan escrits en `python` o en
+`R`. Els scripts de `R` generen gràfiques mentre que `python` té un ús més
 general. Els scripts de `python` estan pensats per a la versió 3 de `python`,
 executar-los amb la versió 2 pot resultar en errors.
 
@@ -19,10 +19,10 @@ especialment la secció sobre *virtual environments*.
 
 ## Scripts presents en aquest repositori
 
-La majoria de scripts en aquest repositori estan relacionats amb la generació
-de les figures del llibre. Molts d'ells utilitzen `R` per a la generació de
-figures. D'altres son "extres" que permeten fer comprovacions sobre el
-material o generar fitxers intermedis i que solen estar en `python`.
+La majoria de codi en aquest repositori està relacionats amb la generació de
+les figures del llibre. Molts d'ells utilitzen `R` per a la generació de
+figures. D'altres son "extres" que permeten fer comprovacions sobre el material
+o generar fitxers intermedis i que solen estar en `python`.
 
 ### Figures del llibre
 
@@ -74,7 +74,9 @@ utilitzen `R`.
   
 * [**Hapax legomena**](hapax_legomena) Un script de `python` que per determinar
   si un text és un Hapax Legomena (totes les paraules del text apareixen un sol
-  cop) i si no ho és, quines paraules estan repetides.
+  cop) i si no ho és, quines paraules estan repetides. Es pot utilitzar per
+  comprobar que en el text del repte Hapax Legomena del llibre no es repeteix
+  cap paraula.
 
 * [**Theil-Sen**](theil_sen) Aquest script de `R` permet obtenir una estimació de
   l'exponent de la llei de Zipf d'un text. També pot generar una gràfica
@@ -83,7 +85,7 @@ utilitzen `R`.
   
 ### Generació d'altres fitxers
 
-Els següents scripts generen fitxers utilitzats per altres scripts.
+Els següent codi genera fitxers utilitzats per altres scripts.
   
 * [**Anàlisis de text**](text_analysis) Aquest script de `python` genera
   fitxers csv a partir de la tokenització d'un text donat. Pot generar un

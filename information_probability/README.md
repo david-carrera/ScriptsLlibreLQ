@@ -5,13 +5,13 @@ gràfica:
 
 ![Relació entre informació i probabilitat](information_probability.png)
 
-Aquesta gràfica s'ha generat executant el script:
+Aquesta gràfica s'ha generat executant:
 
 ```
 Rscript information_probability.R
 ```
 
-El script depèn de la llibreria `ggplot2`. Es podt instal·la des de qualsevol
+El codi depèn de la llibreria `ggplot2`. Es podt instal·la des de qualsevol
 línia de comandes de `R`:
 
 ``` r

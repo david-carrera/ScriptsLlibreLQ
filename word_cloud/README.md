@@ -4,7 +4,7 @@ Aquest script de `python` genera un núvol de les 50 paraules més freqüents en
 un text. A més, pot mostrar la freqüència de cada paraula dins el
 text. Correspon a la figura 2 del llibre.
 
-El script depèn del paquet `wordcloud` que fa la feina més complexa de
+El codi depèn del paquet `wordcloud` que fa la feina més complexa de
 col·locar les paraules en forma de núvol. El paquet es pot instal·lar
 utilitzant `pip`:
 
@@ -29,7 +29,7 @@ python3 word_cloud.py --mostra-frequencies ../text_analysis/DeclaracioDretsHuman
 ```
 
 Es poden controlar molts aspectes de la generació del núvol de paraules sense
-entrar dins el codi del script. Vegeu el resultat d'executar:
+entrar dins el codi. Vegeu el resultat d'executar:
 
 ```
 python3 word_cloud.py --help

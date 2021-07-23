@@ -5,13 +5,13 @@ gràfica:
 
 ![Comparació de dos models de la probabilitat de la freqüència d'una paraula](compare_frequency_probability.png)
 
-Aquesta gràfica s'ha generat executant el script:
+Aquesta gràfica s'ha generat executant:
 
 ```
 Rscript compare_frequency_probability.R
 ```
 
-El script depèn de les llibreries `ggplot2` i `VGAM`. Es poden instal·la des de
+El codi depèn de les llibreries `ggplot2` i `VGAM`. Es poden instal·la des de
 qualsevol línia de comandes de `R`:
 
 ``` r

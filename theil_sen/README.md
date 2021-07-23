@@ -41,7 +41,7 @@ text](../text_analysis)) i, opcionalment, un fitxer on desar la gràfica que
 mostra l'ajustament. El script mostra el valor estimat de l'exponent
 ![\alpha](tex/alpha.png) i de la constant ![A](tex/A.png).
 
-Aquest script depén del paquet `deming` i, opcionalment per tal de generar la
+Aquest codi depén del paquet `deming` i, opcionalment per tal de generar la
 gràfica, del paquet `ggplot2` Els paquets es poden instal·lar des de una línia
 de comandes de `R`:
 
@@ -57,7 +57,7 @@ Com a exemple, una gràfica generada amb aquest script:
 
 ![theil-sen](theil_sen.png)
 
-Que s'ha generat amb la comanda
+Que s'ha generat amb la comanda:
 
 ```
 Rscript theil_sen.R ../text_analysis/DeclaracioDretsHumansFrequencies.csv theil_sen.png

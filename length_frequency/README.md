@@ -4,7 +4,7 @@ Aquest script de `R` mostra la relació entre freqüència i llargada dels mots
 d'un text en escala doble logarítmica. A més, també pot mostrar alguns dels
 mots dins la gràfica. Correspon a la figura 9 del llibre.
 
-El script depèn dels paquets `ggplot2`, `dplyr` i, opcionalment si es volen
+El codi depèn dels paquets `ggplot2`, `dplyr` i, opcionalment si es volen
 mostrar les paraules, del paquet `ggrepel` que es poden instal·lar des de una
 línia de comandes de `R`:
 

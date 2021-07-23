@@ -4,7 +4,7 @@ Aquest script de `R` mostra la relació entre freqüència i rang dels mots d'un
 text, opcionalment en escala doble logarítmica. A més, també pot mostrar alguns
 dels mots dins la gràfica. Correspon a les figures 3 i 4 del llibre.
 
-El script depèn del paquet `ggplot2` i, opcionalment si es volen mostrar les
+El codi depèn del paquet `ggplot2` i, opcionalment si es volen mostrar les
 paraules, del paquet `ggrepel` que es poden instal·lar des de una línia de
 comandes de `R`:
 

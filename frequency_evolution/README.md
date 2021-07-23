@@ -3,7 +3,7 @@
 Aquest script de `R` mostra la evolució en el temps d'un conjunt de
 n-grames. Correspon a les figures 14 i 15 del llibre.
 
-El script depèn dels paquets `ggplot2`, `dplyr`, `tidyr` i `ggrepel` que es pot
+El codi depèn dels paquets `ggplot2`, `dplyr`, `tidyr` i `ggrepel` que es pot
 instal·lar des de una línia de comandes de `R`:
 
 ``` r
@@ -34,8 +34,8 @@ format oferts per [Google Ngrams](https://books.google.com/ngrams/)
 ([`zipf_ngrams.csv`](zipf_ngrams.csv)) i pel [CTILC](https://ctilc.iec.cat)
 ([`catalan_words.csv`](catalan_words.csv)). Cap dels dos serveis ofereix un
 sistema oficial per obtenir les dades en un format informàtic. Més informació
-sobre com obtenir dades d'aquests dos serveis en concret es pot trobar en els
-scripts ([`clean_google.py`](clean_google.py) i
+sobre com obtenir dades d'aquests dos serveis en concret es pot trobar en el
+codi de ([`clean_google.py`](clean_google.py) i
 [`clean_ctilc.py`](clean_ctilc.py)).
 
 Utilitzant aquests fitxers csv ja generats, es poden generar unes gràfiques

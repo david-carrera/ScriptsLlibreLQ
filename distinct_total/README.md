@@ -4,7 +4,7 @@ Aquest script de `R` mostra la relació entre el número de paraules diferents i
 el número de paraules totals d'un text en escala log-log. Correspon a la figura
 12 del llibre.
 
-El script depèn del paquet `ggplot2`, que es pot instal·lar des de una línia de
+El codi depèn del paquet `ggplot2`, que es pot instal·lar des de una línia de
 comandes de `R`:
 
 ``` r
