@@ -48,3 +48,14 @@ continguts del directori son:
   del n-grama "llei de Zipf" en diversos idiomes per a un període
   d'anys. Utilitzada per generar la gràfica mostrant la [evolució de la
   freqüència relativa d'aquests n-grames](../frequency_evolution).
+
+* [**Paraules buides del català**] Un fitxer de text amb les paraules buides (o
+  *stop words*) del català. S'inclou una llista de mots buits obtinguda de
+  Lluís de Yzaguirre i Maura, director del Laboratori de Tecnologies
+  Lingüístiques de l'IULA-UPF (Institut de Lingüística Aplicada de la
+  Universitat Pompeu Fabra). La mateixa llista està disponible a
+  http://latel.upf.edu/morgana/altres/pub/ca_stop.htm També s'han inclòs totes
+  les contraccions del català segons la secció 4.2.1 de la ortografia catalana,
+  disponible digitalment a
+  https://www.iec.cat/llengua/documents/ortografia_catalana_versio_digital.pdf
+  Per simplicitat, paraules ambigües com cap i cal s'han inclòs.
