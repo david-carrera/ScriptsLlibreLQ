@@ -51,8 +51,8 @@ if __name__ == '__main__':
     parser.add_argument(
         "--paraules-buides",
         help="Un fitxer de text que contingui un llistat de paraules "
-        "separades per espais que es pot fer servir com a paraules buides que "
-        "no s'inclouen al núvol.",
+        "separades per espais o salts de línia que es pot fer servir "
+        "com a paraules buides que no s'inclouen al núvol.",
         default="../dades/paraules_buides.txt"
     )
     parser.add_argument(
