@@ -15,7 +15,7 @@ install.packages('dplyr')
 ```
 
 ``` r
-install.packages(`tidyr`)
+install.packages('tidyr')
 ```
 
 ``` r
