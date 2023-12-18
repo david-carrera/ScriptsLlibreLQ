@@ -80,11 +80,19 @@ generate_plot <- function(table) {
             direction = "y",
             hjust = 0,
             nudge_x = 5,
-            xlim = c(-Inf, Inf) 
+            xlim = c(-Inf, Inf)
         ) +
+        theme_classic() +
         theme(
-            plot.margin = unit(c(0.2, 2.3, 0.2, 0.2), "cm")
+            plot.margin = unit(c(0.2, 2.5, 0.2, 0.2), "cm"),
+            legend.position = "none",
+            panel.background = element_rect(fill = "transparent"),
+            plot.background = element_rect(fill = "transparent", color = NA),
+            panel.grid.major = element_blank(),
+            panel.grid.minor = element_blank(),
         ) +
+        scale_shape_manual(values=c("circle" = 21)) +
+        scale_fill_manual(values=c("solid" = "white")) +
         scale_x_continuous(
             n.breaks = 10,
             expand = expansion(mult = 0.01)
@@ -110,6 +118,5 @@ if (!interactive()) {
     
     table <- cleanup_table(table, 10)
     plot <- generate_plot(table)
-    plot <- my_transparent_theme(plot)
     save_figure(plot, outfile, wmult=2)
 }
