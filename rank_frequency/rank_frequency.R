@@ -42,10 +42,6 @@ add_words_to_plot <- function(plot) {
         geom_text_repel(
             min.segment.length = 0.1,
             max.overlaps = Inf
-        ) +
-        scale_y_log10(
-            n.breaks=9,
-            expand = expansion(mult = 0.1) # més espai
         )
 }
 
